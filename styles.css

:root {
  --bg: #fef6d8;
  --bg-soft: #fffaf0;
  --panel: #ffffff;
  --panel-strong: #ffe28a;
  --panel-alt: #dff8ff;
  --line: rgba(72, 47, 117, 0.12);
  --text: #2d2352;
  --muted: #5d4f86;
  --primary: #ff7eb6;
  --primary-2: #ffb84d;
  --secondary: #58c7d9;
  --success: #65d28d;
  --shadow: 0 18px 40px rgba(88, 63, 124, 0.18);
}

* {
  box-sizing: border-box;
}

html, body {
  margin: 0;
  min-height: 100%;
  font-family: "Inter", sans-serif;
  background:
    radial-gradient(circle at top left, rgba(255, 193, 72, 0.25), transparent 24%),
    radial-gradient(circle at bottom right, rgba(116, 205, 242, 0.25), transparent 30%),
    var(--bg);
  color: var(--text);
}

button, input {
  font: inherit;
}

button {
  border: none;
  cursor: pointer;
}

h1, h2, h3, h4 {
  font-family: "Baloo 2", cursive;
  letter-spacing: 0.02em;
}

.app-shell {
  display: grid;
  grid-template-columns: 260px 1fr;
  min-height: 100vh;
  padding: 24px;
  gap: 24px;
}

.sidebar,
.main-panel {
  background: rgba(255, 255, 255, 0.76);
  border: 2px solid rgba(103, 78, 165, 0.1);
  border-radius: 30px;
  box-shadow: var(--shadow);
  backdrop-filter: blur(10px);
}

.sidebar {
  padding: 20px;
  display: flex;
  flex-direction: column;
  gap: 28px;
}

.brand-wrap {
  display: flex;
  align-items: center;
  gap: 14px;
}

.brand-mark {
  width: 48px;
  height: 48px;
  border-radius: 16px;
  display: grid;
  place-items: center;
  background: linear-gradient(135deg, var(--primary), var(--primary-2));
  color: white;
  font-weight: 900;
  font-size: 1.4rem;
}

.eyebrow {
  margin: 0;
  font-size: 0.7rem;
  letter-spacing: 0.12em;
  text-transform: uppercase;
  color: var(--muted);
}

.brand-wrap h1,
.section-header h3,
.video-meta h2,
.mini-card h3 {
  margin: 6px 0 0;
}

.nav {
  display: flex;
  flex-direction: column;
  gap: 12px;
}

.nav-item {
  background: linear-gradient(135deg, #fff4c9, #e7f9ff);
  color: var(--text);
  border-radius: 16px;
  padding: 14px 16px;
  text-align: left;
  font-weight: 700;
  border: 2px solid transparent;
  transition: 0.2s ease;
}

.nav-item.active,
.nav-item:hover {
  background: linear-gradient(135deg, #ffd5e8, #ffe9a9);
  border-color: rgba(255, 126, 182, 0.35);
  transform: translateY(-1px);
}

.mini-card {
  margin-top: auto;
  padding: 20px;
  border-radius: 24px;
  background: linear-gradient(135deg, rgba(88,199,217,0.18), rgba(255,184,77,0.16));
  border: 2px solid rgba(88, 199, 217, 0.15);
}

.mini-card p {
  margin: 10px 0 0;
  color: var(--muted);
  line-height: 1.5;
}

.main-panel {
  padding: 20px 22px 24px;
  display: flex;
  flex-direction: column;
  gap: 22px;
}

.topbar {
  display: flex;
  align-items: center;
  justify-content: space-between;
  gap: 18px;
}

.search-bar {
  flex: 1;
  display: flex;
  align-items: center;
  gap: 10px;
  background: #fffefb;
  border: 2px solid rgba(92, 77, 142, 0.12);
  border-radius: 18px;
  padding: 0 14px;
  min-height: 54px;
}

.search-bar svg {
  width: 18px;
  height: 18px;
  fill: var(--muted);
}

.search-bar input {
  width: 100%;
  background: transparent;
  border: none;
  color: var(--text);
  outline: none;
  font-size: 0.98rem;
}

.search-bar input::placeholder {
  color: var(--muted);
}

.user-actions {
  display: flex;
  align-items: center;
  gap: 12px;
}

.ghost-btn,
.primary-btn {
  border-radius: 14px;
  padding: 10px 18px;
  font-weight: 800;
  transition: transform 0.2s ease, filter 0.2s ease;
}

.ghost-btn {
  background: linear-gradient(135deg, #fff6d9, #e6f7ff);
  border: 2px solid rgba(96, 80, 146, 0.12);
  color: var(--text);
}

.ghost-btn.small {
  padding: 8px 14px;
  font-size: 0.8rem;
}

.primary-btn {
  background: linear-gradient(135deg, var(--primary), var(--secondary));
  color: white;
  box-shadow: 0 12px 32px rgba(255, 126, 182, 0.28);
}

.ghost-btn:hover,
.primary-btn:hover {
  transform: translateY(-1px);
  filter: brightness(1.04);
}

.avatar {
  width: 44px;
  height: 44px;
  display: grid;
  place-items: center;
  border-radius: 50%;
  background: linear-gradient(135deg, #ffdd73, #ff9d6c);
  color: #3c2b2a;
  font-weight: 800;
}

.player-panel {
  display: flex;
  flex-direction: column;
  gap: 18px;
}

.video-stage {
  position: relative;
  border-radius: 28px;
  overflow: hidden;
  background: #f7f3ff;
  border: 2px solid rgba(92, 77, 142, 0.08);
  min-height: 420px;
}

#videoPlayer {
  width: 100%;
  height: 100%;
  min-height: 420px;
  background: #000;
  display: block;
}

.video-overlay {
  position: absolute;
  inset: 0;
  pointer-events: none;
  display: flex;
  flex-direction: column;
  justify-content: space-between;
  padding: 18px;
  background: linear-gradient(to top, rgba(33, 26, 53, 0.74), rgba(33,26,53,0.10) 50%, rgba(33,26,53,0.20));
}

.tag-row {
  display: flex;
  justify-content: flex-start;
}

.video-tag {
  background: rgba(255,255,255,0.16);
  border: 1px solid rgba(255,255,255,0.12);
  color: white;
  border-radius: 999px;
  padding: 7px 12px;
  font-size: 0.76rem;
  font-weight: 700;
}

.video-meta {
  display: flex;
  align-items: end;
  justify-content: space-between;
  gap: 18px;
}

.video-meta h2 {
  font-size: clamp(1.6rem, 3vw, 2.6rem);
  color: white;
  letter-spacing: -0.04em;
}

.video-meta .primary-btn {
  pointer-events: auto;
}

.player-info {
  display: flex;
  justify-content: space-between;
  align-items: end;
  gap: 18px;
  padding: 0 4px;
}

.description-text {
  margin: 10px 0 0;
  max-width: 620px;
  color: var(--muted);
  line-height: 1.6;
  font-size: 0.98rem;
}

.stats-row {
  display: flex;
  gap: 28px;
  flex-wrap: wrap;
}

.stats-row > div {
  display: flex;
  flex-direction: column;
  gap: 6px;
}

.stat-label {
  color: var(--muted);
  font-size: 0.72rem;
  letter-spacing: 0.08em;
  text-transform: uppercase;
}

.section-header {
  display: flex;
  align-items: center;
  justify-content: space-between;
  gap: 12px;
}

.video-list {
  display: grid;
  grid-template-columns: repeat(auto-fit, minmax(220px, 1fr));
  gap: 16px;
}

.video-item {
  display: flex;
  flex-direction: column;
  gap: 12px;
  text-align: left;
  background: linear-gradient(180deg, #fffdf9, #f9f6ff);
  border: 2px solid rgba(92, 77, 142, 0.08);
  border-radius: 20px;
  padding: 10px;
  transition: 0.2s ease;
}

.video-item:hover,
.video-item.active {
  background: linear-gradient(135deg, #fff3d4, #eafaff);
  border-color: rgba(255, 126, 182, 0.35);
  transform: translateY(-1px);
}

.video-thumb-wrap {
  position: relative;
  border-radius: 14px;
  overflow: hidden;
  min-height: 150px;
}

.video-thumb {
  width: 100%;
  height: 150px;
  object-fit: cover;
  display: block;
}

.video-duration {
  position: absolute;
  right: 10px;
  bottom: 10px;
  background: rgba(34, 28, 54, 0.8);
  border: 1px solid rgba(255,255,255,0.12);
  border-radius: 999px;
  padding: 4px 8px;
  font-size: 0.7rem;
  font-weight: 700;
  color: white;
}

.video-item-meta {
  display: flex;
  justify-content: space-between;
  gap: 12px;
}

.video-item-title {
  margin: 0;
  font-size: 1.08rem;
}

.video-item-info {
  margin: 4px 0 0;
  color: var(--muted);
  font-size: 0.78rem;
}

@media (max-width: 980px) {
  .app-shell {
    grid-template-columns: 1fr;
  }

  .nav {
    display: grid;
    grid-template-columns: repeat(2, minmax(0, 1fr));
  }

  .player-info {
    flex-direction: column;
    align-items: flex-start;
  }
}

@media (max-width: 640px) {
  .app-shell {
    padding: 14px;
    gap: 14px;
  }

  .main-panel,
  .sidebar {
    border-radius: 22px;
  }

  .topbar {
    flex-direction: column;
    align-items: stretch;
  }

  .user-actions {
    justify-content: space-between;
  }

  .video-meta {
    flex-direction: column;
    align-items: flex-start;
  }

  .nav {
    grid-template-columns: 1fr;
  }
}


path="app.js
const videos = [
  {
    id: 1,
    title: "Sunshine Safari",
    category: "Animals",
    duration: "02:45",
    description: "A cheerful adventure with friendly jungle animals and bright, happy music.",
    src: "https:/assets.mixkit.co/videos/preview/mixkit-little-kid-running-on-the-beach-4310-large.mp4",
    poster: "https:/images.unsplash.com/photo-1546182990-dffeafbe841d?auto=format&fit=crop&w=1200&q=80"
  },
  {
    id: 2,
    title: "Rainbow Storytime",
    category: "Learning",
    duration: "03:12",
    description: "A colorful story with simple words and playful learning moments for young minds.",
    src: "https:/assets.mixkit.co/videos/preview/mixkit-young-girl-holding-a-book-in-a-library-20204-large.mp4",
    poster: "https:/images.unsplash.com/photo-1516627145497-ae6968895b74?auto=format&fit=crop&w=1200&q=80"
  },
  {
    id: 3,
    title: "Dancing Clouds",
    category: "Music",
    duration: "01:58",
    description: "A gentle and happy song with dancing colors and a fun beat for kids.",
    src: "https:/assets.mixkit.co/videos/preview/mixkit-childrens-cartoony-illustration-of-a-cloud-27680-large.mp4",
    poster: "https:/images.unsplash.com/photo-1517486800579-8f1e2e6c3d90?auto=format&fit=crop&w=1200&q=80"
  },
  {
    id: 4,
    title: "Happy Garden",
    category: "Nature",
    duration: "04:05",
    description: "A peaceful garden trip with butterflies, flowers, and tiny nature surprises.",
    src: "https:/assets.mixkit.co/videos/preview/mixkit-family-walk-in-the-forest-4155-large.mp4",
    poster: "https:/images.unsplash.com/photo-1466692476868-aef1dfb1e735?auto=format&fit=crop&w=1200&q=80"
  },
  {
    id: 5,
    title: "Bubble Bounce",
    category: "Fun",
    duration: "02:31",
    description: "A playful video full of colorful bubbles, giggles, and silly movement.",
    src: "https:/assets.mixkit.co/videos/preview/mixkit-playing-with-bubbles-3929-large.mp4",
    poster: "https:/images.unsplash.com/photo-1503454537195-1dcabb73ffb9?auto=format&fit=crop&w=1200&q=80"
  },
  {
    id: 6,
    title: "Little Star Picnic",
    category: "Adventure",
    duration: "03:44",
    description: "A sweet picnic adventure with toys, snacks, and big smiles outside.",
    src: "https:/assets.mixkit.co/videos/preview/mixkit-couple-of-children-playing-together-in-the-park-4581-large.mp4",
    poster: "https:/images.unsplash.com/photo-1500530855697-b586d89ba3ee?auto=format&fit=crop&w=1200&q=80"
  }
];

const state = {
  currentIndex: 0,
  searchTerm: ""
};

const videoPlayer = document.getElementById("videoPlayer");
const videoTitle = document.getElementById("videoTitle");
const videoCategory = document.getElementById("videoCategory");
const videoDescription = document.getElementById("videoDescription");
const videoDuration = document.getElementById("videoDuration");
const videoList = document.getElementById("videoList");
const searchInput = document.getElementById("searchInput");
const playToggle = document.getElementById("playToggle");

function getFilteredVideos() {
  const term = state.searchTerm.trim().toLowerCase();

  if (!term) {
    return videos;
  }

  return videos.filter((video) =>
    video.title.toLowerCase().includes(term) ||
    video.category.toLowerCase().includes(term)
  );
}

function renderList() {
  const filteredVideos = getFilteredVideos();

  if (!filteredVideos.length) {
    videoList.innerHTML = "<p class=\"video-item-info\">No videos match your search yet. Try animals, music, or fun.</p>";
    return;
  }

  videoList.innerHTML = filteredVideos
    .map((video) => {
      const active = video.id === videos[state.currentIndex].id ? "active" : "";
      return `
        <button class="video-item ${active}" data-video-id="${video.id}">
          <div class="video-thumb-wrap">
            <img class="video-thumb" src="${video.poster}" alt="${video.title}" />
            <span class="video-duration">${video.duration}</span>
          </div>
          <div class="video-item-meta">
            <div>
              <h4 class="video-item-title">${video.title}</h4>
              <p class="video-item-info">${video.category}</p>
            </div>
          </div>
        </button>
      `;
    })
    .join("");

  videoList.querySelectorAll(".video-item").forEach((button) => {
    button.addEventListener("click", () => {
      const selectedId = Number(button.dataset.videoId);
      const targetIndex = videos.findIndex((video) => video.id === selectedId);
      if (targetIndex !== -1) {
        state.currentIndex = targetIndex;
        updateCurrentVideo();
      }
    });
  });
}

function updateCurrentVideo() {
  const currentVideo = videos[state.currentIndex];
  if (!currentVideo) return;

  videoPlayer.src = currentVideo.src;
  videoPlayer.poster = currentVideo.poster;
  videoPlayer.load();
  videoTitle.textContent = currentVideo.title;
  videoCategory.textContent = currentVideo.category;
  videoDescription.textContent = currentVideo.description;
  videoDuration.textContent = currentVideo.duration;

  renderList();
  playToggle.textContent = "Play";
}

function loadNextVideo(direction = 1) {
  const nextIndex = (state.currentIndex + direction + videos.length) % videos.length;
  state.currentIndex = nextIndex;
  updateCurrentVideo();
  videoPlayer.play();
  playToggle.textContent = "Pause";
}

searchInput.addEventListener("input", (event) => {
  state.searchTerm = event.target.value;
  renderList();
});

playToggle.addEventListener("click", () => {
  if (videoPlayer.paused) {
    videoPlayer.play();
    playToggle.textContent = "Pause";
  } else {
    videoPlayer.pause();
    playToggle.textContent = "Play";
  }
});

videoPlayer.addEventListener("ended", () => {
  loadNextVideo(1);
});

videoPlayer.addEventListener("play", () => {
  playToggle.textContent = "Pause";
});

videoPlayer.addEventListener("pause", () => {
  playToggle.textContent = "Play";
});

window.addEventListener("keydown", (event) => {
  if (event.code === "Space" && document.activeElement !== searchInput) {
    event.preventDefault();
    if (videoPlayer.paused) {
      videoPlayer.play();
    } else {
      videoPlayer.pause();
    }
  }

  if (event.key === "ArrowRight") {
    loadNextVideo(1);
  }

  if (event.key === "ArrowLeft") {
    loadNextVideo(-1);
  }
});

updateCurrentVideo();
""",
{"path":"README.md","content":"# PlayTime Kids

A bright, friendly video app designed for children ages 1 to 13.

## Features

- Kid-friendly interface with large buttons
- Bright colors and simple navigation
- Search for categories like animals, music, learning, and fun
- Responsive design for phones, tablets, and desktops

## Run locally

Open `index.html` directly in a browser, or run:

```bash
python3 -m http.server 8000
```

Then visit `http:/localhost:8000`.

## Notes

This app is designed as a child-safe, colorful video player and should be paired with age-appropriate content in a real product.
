@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayTime Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">▶</div>
+          <div>
+            <p class="eyebrow">For kids</p>
+            <h1>PlayTime</h1>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+          <button class="nav-item active"><span>Home</span></button>
+          <button class="nav-item"><span>Animals</span></button>
+          <button class="nav-item"><span>Learning</span></button>
+          <button class="nav-item"><span>Music</span></button>
+          <button class="nav-item"><span>Fun</span></button>
+        </nav>
+
+        <div class="mini-card">
+          <p class="eyebrow">Today’s pick</p>
+          <h3>Rainbow Adventure</h3>
+          <p>Bright videos, happy songs, and friendly learning for curious kids.</p>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <label class="search-bar" aria-label="Search videos">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.5 3a7.5 7.5 0 015.94 12.56l4.26 4.26 1.41-1.41-4.26-4.26A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/>
+            </svg>
+            <input id="searchInput" type="text" placeholder="Search cartoons, songs, stories..." />
+          </label>
+
+          <div class="user-actions">
+            <button class="ghost-btn">My List</button>
+            <div class="avatar">K</div>
+          </div>
+        </header>
+
+        <section class="player-panel">
+          <div class="video-stage">
+            <video id="videoPlayer" controls playsinline preload="metadata"></video>
+            <div class="video-overlay">
+              <div class="tag-row">
+                <span id="videoCategory" class="video-tag">Nature</span>
+              </div>
+              <div class="video-meta">
+                <div>
+                  <p class="eyebrow">Now playing</p>
+                  <h2 id="videoTitle">Sunshine Safari</h2>
+                </div>
+                <button id="playToggle" class="primary-btn">Play</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-info">
+            <div>
+              <p class="eyebrow">About this video</p>
+              <p id="videoDescription" class="description-text">
+                A cheerful adventure full of colorful animals, happy music, and a sunny, friendly mood.
+              </p>
+            </div>
+
+            <div class="stats-row">
+              <div>
+                <span class="stat-label">Kids</span>
+                <strong>1-13</strong>
+              </div>
+              <div>
+                <span class="stat-label">Length</span>
+                <strong id="videoDuration">02:45</strong>
+              </div>
+              <div>
+                <span class="stat-label">Fun</span>
+                <strong>★★★★★</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="playlist-panel">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Recommended for you</p>
+              <h3>Watch next</h3>
+            </div>
+            <button class="ghost-btn small">See all</button>
+          </div>
+
+          <div id="videoList" class="video-list" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
